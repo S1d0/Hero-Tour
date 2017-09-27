@@ -19,4 +19,11 @@ export class HeroService {
   getSelectedHero() {
     return this.selectedHero;
   }
+
+  getHeroesSlowly(): Promise<Hero[]> {
+    return new Promise(resolve => {
+      // Simulate server latency with 2 second delay
+      setTimeout(() => resolve(this.getHeroes()), 2000);
+    });
+  }
 }

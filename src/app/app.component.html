@@ -1,18 +1,11 @@
+<ul class="nav nav-pills nav-stacked">
+  <li><a href="#">Home </a></li>
+  <li><a href="#">Dashboard </a></li>
+  <li><a href="#">Heroes</a></li>
+</ul>
+
 <div class="container-fluid">
+  <div class="jumbotron-fluid">
+  </div>
   <h1>{{title}}</h1>
-  <hr>
-  <div>
-    <h2>My Heroes</h2>
-    <ul class="heroes">
-      <li *ngFor="let hero of heroes"
-          (click)="onSelect(hero)"
-          [class.selected]="hero===selectedHero">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
-      </li>
-    </ul>
-  </div>
-  <hr>
-  <div>
-    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
-  </div>
 </div>
